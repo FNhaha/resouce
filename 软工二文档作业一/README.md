@@ -5,7 +5,7 @@
     本报告面向开发人员，及最终用户而编写，是了解系统的导航。
 ##2.用例图
 [use cases diagram][1]
-[1]:https://github.com/FNhaha/resouce/blob/master/软工二文档作业一/用例图.png
+[1]:https://github.com/FNhaha/happy_SE/blob/dev/软工二文档作业一/用例图.png
 ##3.用例列表
 - 热映电影信息调整
 - 即将上映电影信息调整
@@ -22,11 +22,12 @@
 - 前置条件：获得新影片发行商的宣传许可
 - 后置条件：存储影片名称，宣传片，简介，图片剧照，演职人员，上映时间，影片类型
 - 正常流程：  
-    1. 影院开始新一次上架电影  
-    2. 影院向系统输入影片名称宣传片，简介，图片剧照，演职人员，上映时间，影片类型   
-    3. 影院向系统确认信息  
-    4. 影院重复2-3步，直到完成所有新影片上架  
-    5. 影院输入结束，系统显示当前上架所有影片信息  
+    1. 验证身份
+    2. 影院开始新一次上架电影  
+    3. 影院向系统输入影片名称宣传片，简介，图片剧照，演职人员，上映时间，影片类型   
+    4. 影院向系统确认信息  
+    5. 影院重复2-4步，直到完成所有新影片上架  
+    6. 影院输入结束，系统显示当前上架所有影片信息  
 - 拓展流程：
     * 2a.影院发现有信息输入错误
 
@@ -42,7 +43,7 @@
 - 创建者：happy_SE
 - 最后一次更新者：happy_SE
 - 更新日期：2019/3/19
-- 参与者：影院 目标是收集预售想看人数来进行后期排片调整 观众 目标是支持所喜爱的电影，标记想看
+- 参与者：影院 目标是收集预售想看人数来进行后期排片调整
 - 触发条件：有新影片上架变成预售状态
 - 前置条件：影院获得发行商影片放映许可，给预售电影进行排片
 - 后置条件：存储影片名称及其对应想看人数
@@ -63,6 +64,49 @@
         2. 系统删除该小时段所有预售电影的想看标记次数  
         
 -    特殊需求：无
+
+###4.3电影查询
+- 用例编号： 03
+- 名称：电影查询
+- 创建者：happy_SE
+- 最后一次更新者：happy_SE
+- 更新日期：2019/3/20
+- 参与者：观众 目标是了解某影片的详情
+- 触发条件：观众想要查询某电影
+- 前置条件：观众登录到系统
+- 后置条件：显示搜索结果
+- 正常流程：
+    1. 观众登录系统
+    2. 观众在搜索栏输入某影片的特征信息
+    3. 系统返回影片详细信息
+- 拓展流程：
+    * 2a.若系统主页面有观众查询的电影：
+        1. 观众点击该电影链接
+        2. 系统返回影片详情
+    * 3a.若系统中无该影片信息则返回提示“该影片不存在”
+- 特殊需求：无
+
+###4.4标记某电影为想看
+- 用例编号：04
+- 名称：标记某电影为想看
+- 创建者：happy_SE
+- 最后一次创建者：happy_SE
+- 更新日期：2019/3/20
+- 参与者：观众 目标是支持某喜爱电影
+- 触发条件：观众想要支持某电影
+- 前置条件：观众登录到系统
+- 后置条件：系统显示某电影想看人数得到增加
+- 正常流程：
+    1. 观众登录系统
+    2. 观众在主页面点击想看的电影
+    3. 系统返回电影详情页面
+    4. 观众点击“想看”按钮
+    5. 系统显示该电影想看人数得到增加
+- 拓展流程：
+    * 2a.若主页面没有观众想看电影，则观众可以通过搜索栏寻找该电影进入电影详情页面
+    * 4-5a.若观众误触“想看”按钮
+        1. 观众再次点击“想看”按钮
+        2. 系统返回显示原想看人数
 ##5.需求分析模型
 ###5.1 系统顺序图
 
@@ -70,16 +114,16 @@
 [2]:https://github.com/jiangxizhanzhi/resource/blob/master/系统顺序图1.PNG
 
 [sequence diagram][3]
-[3]:https://github.com/jiangxizhanzhi/resource/blob/master/系统顺序图2.PNG
+[3]:https://github.com/FNhaha/happy_SE/blob/dev/软工二文档作业一/系统顺序图2.png
       
 ###5.2 概念类图
 [concenptual class diagram][4]
-[4]:https://github.com/FNhaha/resouce/blob/master/软工二文档作业一/上架电影.png
+[4]:https://github.com/FNhaha/happy_SE/blob/dev/软工二文档作业一/上架电影.png
 [concenptual class diagram][5]
-[5]:https://github.com/FNhaha/resouce/blob/master/软工二文档作业一/获取电影标记人数.png
+[5]:https://github.com/FNhaha/happy_SE/blob/dev/软工二文档作业一/获取电影标记人数.png
 [concenptual class diagram][6]
-[6]:https://github.com/FNhaha/resouce/blob/master/软工二文档作业一/查看电影详情.png
+[6]:https://github.com/FNhaha/happy_SE/blob/dev/软工二文档作业一/查看电影详情.png
 [concenptual class diagram][7]
-[7]:https://github.com/FNhaha/resouce/blob/master/软工二文档作业一/标记电影.png
+[7]:https://github.com/FNhaha/happy_SE/blob/dev/软工二文档作业一/标记电影.png
 [concenptual class diagram][8]
-[8]:https://github.com/FNhaha/resouce/blob/master/软工二文档作业一/搜索.png
+[8]:https://github.com/FNhaha/happy_SE/blob/dev/软工二文档作业一/搜索.png
