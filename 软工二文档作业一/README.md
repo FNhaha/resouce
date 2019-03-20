@@ -5,7 +5,7 @@
     本报告面向开发人员，及最终用户而编写，是了解系统的导航。
 ##2.用例图
 [use cases diagram][1]
-[1]:https://github.com/jiangxizhanzhi/resource/blob/master/usecaseDiagram2.PNG
+[1]:https://github.com/FNhaha/resouce/blob/master/软工二文档作业一/用例图.png
 ##3.用例列表
 - 热映电影信息调整
 - 即将上映电影信息调整
